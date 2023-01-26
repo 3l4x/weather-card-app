@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 700px;
+}
+
+weather-card{
+    display: none;
+}
