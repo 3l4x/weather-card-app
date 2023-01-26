@@ -163,8 +163,8 @@ class WeatherCard extends HTMLElement {
                 `${data[key].description.charAt(0).toUpperCase() + data[key].description.slice(1)}`;
             const img = document.createElement('img');
             //getting icon URL
-            //`http://openweathermap.org/img/wn/${data.weather.icon}@2x.png`
-            img.src = `http://openweathermap.org/img/wn/${data[key].icon}@2x.png`;
+            //`https://openweathermap.org/img/wn/${data.weather.icon}@2x.png`
+            img.src = `https://openweathermap.org/img/wn/${data[key].icon}@2x.png`;
             icon.innerHTML = '';
             icon.appendChild(img);
             ptr.append(newCard);
@@ -203,13 +203,13 @@ class WeatherCard extends HTMLElement {
     fetchResults(city) {
         if (!city || city.length === 0)
             return Promise.reject(new Error('No city given'));
-        //'http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}'
+        //'https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}'
         const params = new URLSearchParams({
             q: city,
             limit: 5,
             appid: API_KEY
         })
-        return fetch(`http://api.openweathermap.org/geo/1.0/direct?${params}`);
+        return fetch(`https://api.openweathermap.org/geo/1.0/direct?${params}`);
     }
 
     //displaying search results inside div.results 
