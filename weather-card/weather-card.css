@@ -1,0 +1,23 @@
+:host {
+    position: relative;
+    width: 100%;
+}
+
+:host .forecast {
+    display: flex;
+}
+
+:host .main {
+    margin-bottom: 20px;
+}
+
+:host .searchbar {
+    position: absolute;
+    text-align: right;
+    right: 0;
+    top: 0;
+}
+
+.hidden {
+    visibility: hidden;
+}
